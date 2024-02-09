@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cone">
+
+    <ImageView
+        android:id="@+id/imagecone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintDimensionRatio="1:1"
+        android:background="@drawable/ic_launcher_background"
+        app:layout_constraintBottom_toBottomOf="@id/guideline4"
+        android:layout_marginTop="20dp"
+        android:scaleType="center">
+
+    </ImageView>
+
+    <EditText
+        android:id="@+id/rediuscone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/imagecone"
+        app:layout_constraintStart_toStartOf="@id/imagecone"
+        app:layout_constraintEnd_toEndOf="@+id/imagecone"
+        android:layout_marginTop="10dp"
+        android:inputType="number"
+        style="@style/textstyle"
+        android:textSize="32sp"
+        android:hint="Enter the Redius">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/heghtcone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/rediuscone"
+        app:layout_constraintStart_toStartOf="@+id/rediuscone"
+        app:layout_constraintEnd_toEndOf="@+id/rediuscone"
+        android:textSize="32sp"
+        android:inputType="number"
+        style="@style/textstyle"
+        android:hint="Enter the height"
+        android:layout_marginTop="15dp">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/calculatecone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@color/red"
+        android:text="Calculate the Volume"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/heghtcone"
+        app:layout_constraintStart_toStartOf="@+id/heghtcone"
+        app:layout_constraintTop_toBottomOf="@+id/heghtcone">
+
+    </Button>
+    <TextView
+        android:id="@+id/resultvolumecone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/calculatecone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="10dp"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Result">
+
+    </TextView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.18" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

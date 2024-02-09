@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".hexagonal">
+
+    <ImageView
+        android:id="@+id/imagehexagonal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ic_launcher_background"
+        android:scaleType="center"
+        app:layout_constraintBottom_toBottomOf="@id/guideline4"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="@id/guideline3">
+
+    </ImageView>
+
+    <EditText
+        android:id="@+id/lengthhexa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/imagehexagonal"
+        app:layout_constraintStart_toStartOf="@id/imagehexagonal"
+        app:layout_constraintEnd_toEndOf="@+id/imagehexagonal"
+        android:layout_marginTop="10dp"
+        style="@style/textstyle"
+        android:inputType="number"
+        android:textSize="32sp"
+        android:hint="Enter the Length">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/widthhexa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/lengthhexa"
+        app:layout_constraintStart_toStartOf="@+id/lengthhexa"
+        app:layout_constraintEnd_toEndOf="@+id/lengthhexa"
+        android:textSize="32sp"
+        android:inputType="number"
+        android:hint="Enter the width"
+        style="@style/textstyle"
+        android:layout_marginTop="15dp">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/heghthexa"
+        style="@style/textstyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Enter the height"
+        android:inputType="number"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="@+id/widthhexa"
+        app:layout_constraintStart_toStartOf="@+id/widthhexa"
+        app:layout_constraintTop_toBottomOf="@+id/widthhexa">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/calculatehexa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@color/red"
+        android:text="Calculate the Volume"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/heghthexa"
+        app:layout_constraintStart_toStartOf="@+id/heghthexa"
+        app:layout_constraintTop_toBottomOf="@+id/heghthexa">
+
+    </Button>
+    <TextView
+        android:id="@+id/resultvolumehexa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/calculatehexa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="10dp"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Result">
+
+    </TextView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.63" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.17" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

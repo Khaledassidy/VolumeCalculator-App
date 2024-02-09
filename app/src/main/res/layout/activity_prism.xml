@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".prism">
+
+    <ImageView
+        android:id="@+id/imageprism"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="center"
+        android:background="@drawable/ic_launcher_background"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintBottom_toBottomOf="@id/guideline4"
+        app:layout_constraintStart_toStartOf="@id/guideline3">
+
+    </ImageView>
+
+    <EditText
+        android:id="@+id/lengthprism"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/imageprism"
+        app:layout_constraintStart_toStartOf="@id/imageprism"
+        app:layout_constraintEnd_toEndOf="@+id/imageprism"
+        android:layout_marginTop="10dp"
+        style="@style/textstyle"
+        android:inputType="number"
+        android:textSize="32sp"
+        android:hint="Enter the Length">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/widthprism"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/lengthprism"
+        app:layout_constraintStart_toStartOf="@+id/lengthprism"
+        app:layout_constraintEnd_toEndOf="@+id/lengthprism"
+        android:textSize="32sp"
+        android:inputType="number"
+        style="@style/textstyle"
+        android:hint="Enter the width"
+        android:layout_marginTop="15dp">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/heghtprism"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/widthprism"
+        app:layout_constraintStart_toStartOf="@+id/widthprism"
+        app:layout_constraintEnd_toEndOf="@+id/widthprism"
+        android:hint="Enter the height"
+        android:inputType="number"
+        android:textSize="32sp"
+        style="@style/textstyle"
+        android:layout_marginTop="15dp">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/calculatevolume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@color/red"
+        android:text="Calculate the Volume"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/heghtprism"
+        app:layout_constraintStart_toStartOf="@+id/heghtprism"
+        app:layout_constraintTop_toBottomOf="@+id/heghtprism">
+
+    </Button>
+
+    <TextView
+        android:id="@+id/resultprism"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Result"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculatevolume"
+        app:layout_constraintVertical_bias="0.491">
+
+    </TextView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.61" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.17" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
